@@ -275,6 +275,15 @@ change the setting's value."
   :type 'boolean
   :group 'nrepl)
 
+;; Subject: Re: nrepl.el
+;; To: Malcolm Sparks <malcolm@congreve.com>
+;; Date: Wed, 24 Apr 2013 11:27:45 +0200 (2 hours, 4 minutes, 28 seconds ago)
+;;
+;; Now that we are depending on tramp you might as well use
+;; `tramp-default-method` instead of `nrepl-remote-tunnel-program`,
+;; right? (Letting tramp decide the method will ensure compatibility when
+;; Emacs runs on Windows)
+;;
 (defcustom nrepl-remote-tunnel-program "ssh"
   "Program which will be invoked to provide a tunnel to the remote nREPL server."
   :type 'string
